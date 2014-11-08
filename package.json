@@ -1,0 +1,21 @@
+{
+  "name": "hangulkit",
+  "description": "Useful tools for Hangul (Korean Alphabet & Korean Language). Split Hangul by each components and easily put Josa(Suffix) on it.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "./hangulkit.js",
+  "author": {
+    "name": "Fermata",
+    "email": "soport55@gmail.com",
+    "url": "http://thefermata.net"
+  },
+  "licenses": [ {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT"
+  } ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Fermata"
+  },
+  "keywords":["hangul","hangeul","josa","한글","조사","은는이가","을를","로 으로","초성","중성","종성"]
+}
