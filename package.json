@@ -15,7 +15,7 @@
   } ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/Fermata"
+    "url": "git://github.com/Fermata/hangulkit"
   },
   "keywords":["hangul","hangeul","josa","한글","조사","은는이가","을를","로 으로","초성","중성","종성"]
 }
