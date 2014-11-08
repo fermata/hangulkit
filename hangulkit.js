@@ -9,6 +9,9 @@ sungs.forEach(function(e,i){
 const sungsCountLastTwo = (sungs[1].length*sungs[2].length);
 const sungsCountLast = sungs[2].length;
 
+var changeFrom = 'ㄲ ㄸ ㅃ ㅆ ㅉ ㅘ ㅙ ㅚ ㅝ ㅞ ㅟ ㅢ ㄳ ㄵ ㄶ ㄺ ㄻ ㄼ ㄽ ㄾ ㄿ ㅀ ㅄ'.split(' ');
+var changeTo = 'ㄱㄱ ㄷㄷ ㅂㅂ ㅅㅅ ㅈㅈ ㅗㅏ ㅗㅐ ㅗㅣ ㅜㅓ ㅜㅔ ㅜㅣ ㅡㅣ ㄱㅅ ㄴㅈ ㄴㅎ ㄹㄱ ㄹㅁ ㄹㅂ ㄹㅅ ㄹㅌ ㄹㅍ ㄹㅎ ㅂㅅ'.split(' ');
+
 var hanbreak = function(input){
   var result = '';
   for(var i = 0; i < input.length; i++){
@@ -30,7 +33,14 @@ var hanbreak = function(input){
   }
   return result;
 };
-
+var detailBreak = function(keyword){
+  var hanbroke = hanbreak(keyword);
+  changeFrom.forEach(function(from,i){
+    var regex = new RegExp(from,'g');
+    hanbroke = hanbroke.replace(regex,changeTo[i]);
+  });
+  return hanbroke;
+}
 var lastsung = function(keyword){
   keyword = hanbreak(keyword);
   var last = keyword.charAt(keyword.length-1);
@@ -43,6 +53,7 @@ var containsJongsung = function(keyword){
 }
 
 module.exports.hanbreak = hanbreak;
+module.exports.detailBreak = detailBreak;
 module.exports.lastsung = lastsung;
 module.exports.containsJongsung = containsJongsung;
 module.exports.eunneun = function(keyword){
